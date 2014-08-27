@@ -1,22 +1,22 @@
-whatbrowser.js
+whatBrowser.js
 ============
 
-Ever tried to tell what the current browser is being used in Javascript? 
+Ever tried to tell what the current Browser is being used in Javascript? 
 
 Well I have, Hundreds of times - so after a bit of refinement I've added all the bits of code I've used in the past into one succinct object.
 
-# What browser am I using?
+# What Browser am I using?
 
-A simple javascript file that can be included to a webpage to use for browser detection,
+A simple javascript file that can be included to a webpage to use for Browser detection,
 
 Simply include : 
 ``<script type="text/javascript" src="whatBrowser.js" ></script>
 ``
 
-It's great to target older browsers, IE6, IE7, IE8 and older versions of Safari, Chrome, Firefox, Opera.
+It's great to target older Browsers, IE6, IE7, IE8 and older versions of Safari, Chrome, Firefox, Opera.
 
 ```javascript
-what.browser.isThis(function(device,version){ 
+what.Browser.isThis(function(device,version){ 
 	console.log(device,version)
 });
 ```
@@ -61,22 +61,22 @@ if(what.device._iPod() == true){
 	//Device is iPod
 }
 ```
-### opera Mobile
+### Opera Mobile
 ```javascript
 if(what.device._opera() == true){
 	//Device is Opera Mobile
 }
 ```
-### windows Phone
+### Windows Phone
 ```javascript
 if(what.device._windows() == true){
 	//Device is Windows Phone
 }
 ```
 
-Use this to find out if the current browser is:
+Use this to find out if the current Browser is:
 
-#If the browser is Touch Enabled:
+#If the Browser is Touch Enabled:
 
 ```javascript
 if(what.device.isTouchDevice() == true){
@@ -84,7 +84,7 @@ if(what.device.isTouchDevice() == true){
 }
 ```
 
-#If the browser is desktop:
+#If the Browser is desktop:
 
 ```javascript
 if(what.device.isDesktop() == true){
@@ -93,7 +93,7 @@ if(what.device.isDesktop() == true){
 ```
 
 
-#If the browser is Tablet :
+#If the Browser is Tablet :
 
 ```javascript
 if(what.device.isTablet() == true){
@@ -102,7 +102,7 @@ if(what.device.isTablet() == true){
 ```
 
 
-#If the browser is Mobile :
+#If the Browser is Mobile :
 ```javascript
 if(what.device.isMobile() == true){
 	//Mobile device
