@@ -92,14 +92,14 @@ var what = what || {
         _any: function() {
             return (what.device._android() || what.device._blackBerry() || what.device._ios() || what.device._opera() || what.device._windows());
         },
-        is_Mobile: function() {
+        isMobile: function() {
             if (what.device.screenSize.width <= 550 && what.device._any() == true) {
                 return true;
             } else {
                 return false;
             }
         },
-        is_Tablet: function() {
+        isTablet: function() {
             if (what.device.screenSize.width <= 800 && what.device.screenSize.width >= 550) {
                 return true;
             } else {
@@ -110,7 +110,7 @@ var what = what || {
             return 'ontouchstart' in window // works on most browsers 
                 || 'onmsgesturechange' in window; // works on ie10
         },
-        is_Desktop: function() {
+        isDesktop: function() {
             if (what.device.screenSize.width >= 640 && this.isTouchDevice() == false) {
                 return true;
             } else {
