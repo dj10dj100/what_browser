@@ -1,4 +1,9 @@
-/* -- Browser Detection --------------- */
+/* -- Proper Browser Detection --------------- 
+    Author :Daniel Jenkins
+    URL : http://www.daniel-jenkins.com
+    GitHub : https://github.com/dj10dj100/what_browser
+    Use this however you want.
+*/
 
 var what = what || {
 
@@ -54,10 +59,6 @@ var what = what || {
             identity: "Opera"
         }]
 
-    },
-    screenSize: {
-        width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, // unfortunate IE Quirks, still faster than using $().width()
-        height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
     },
     /* 
      * Use this to find specific device type on the fly
@@ -119,4 +120,6 @@ var what = what || {
         }
     }
 }
+
+
 

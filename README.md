@@ -3,7 +3,7 @@ whatBrowser.js
 
 Ever tried to tell what the current Browser is being used in Javascript? 
 
-Well I have, Hundreds of times - so after a bit of refinement I've added all the bits of code I've used in the past into one succinct object.
+Well I have, Hundreds of times - so after a bit of refinement I've added all the bits of code I've used in the past into one small library, feel free to fork it, make changes and suggestions....
 
 # What Browser am I using?
 
@@ -20,6 +20,8 @@ what.Browser.isThis(function(device,version){
 	console.log(device,version)
 });
 ```
+
+# Device Detecting
 
 Includes detection for mobile devices, it'll tell you if the device is : 
 
@@ -108,4 +110,8 @@ if(what.device.isMobile() == true){
 	//Mobile device
 }
 ```
+
+
+Any comments, or questions grab me on twitter @dj10dj100
+
 
