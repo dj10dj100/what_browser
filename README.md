@@ -32,36 +32,43 @@ if(what.device._android() == true){
 if(what.device._android() == true){
 	
 }
+```
 ### iOS 
 ```javascript
 if(what.device._android() == true){
 	
 }
+```
 ### iPhone 
 ```javascript
 if(what.device._android() == true){
 	
 }
+```
 ### iPad 
 ```javascript
 if(what.device._android() == true){
 	
 }
+```
 ### iPod 
 ```javascript
 if(what.device._android() == true){
 	
 }
+```
 ### opera Mobile
 ```javascript
 if(what.device._android() == true){
 	
 }
+```
 ### windows Phone
 ```javascript
 if(what.device._android() == true){
 	
 }
+```
 
 Use this to find out if the current browser is:
 
