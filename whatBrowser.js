@@ -112,7 +112,7 @@ var what = what || {
                 || 'onmsgesturechange' in window; // works on ie10
         },
         isDesktop: function() {
-            if (what.device.screenSize.width >= 640 && this.isTouchDevice() == false) {
+            if (what.device.screenSize.width >= 640 && what.device.isTouchDevice() == false) {
                 return true;
             } else {
                 return false;
