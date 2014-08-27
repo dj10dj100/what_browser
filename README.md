@@ -11,15 +11,30 @@ A simple javascript file that can be included to a webpage to use for browser de
 
 It's great to target older browsers, IE6, IE7, IE8 and older versions of Safari, Chrome, Firefox, Opera.
 
-``what.browser.isThis(function(device,version){ 
+```javascript
+what.browser.isThis(function(device,version){ 
 	console.log(device,version)
-	});``
+});
+```
 
-Includes detection for mobile devices, it'll tell you if the device is : android, blackBerry, ios, iPhone, iPad, iPod, opera, windows.
+Includes detection for mobile devices, it'll tell you if the device is : 
+
+### android: 
+
+```javascript
+what.device._android()
+```
+
+### blackBerry:, ios, iPhone, iPad, iPod, opera, windows.
 
 Use this to find out if the current browser is:
 
 #If the browser is Touch Enabled:
+
+```javascript
+what.browser.isThis(function(device,version){ 
+	console.log(device,version)
+});
 
 #If the browser is desktop:
 
