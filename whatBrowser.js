@@ -65,7 +65,10 @@ var what = what || {
      * Returns, mobile, type & screen sizes.
      */
     device : {
-
+        screenSize: {
+            width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, // unfortunate IE Quirks, still faster than using $().width()
+            height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        },
         _android: function() {
             return navigator.userAgent.match(/Android/i);
         },
@@ -118,6 +121,7 @@ var what = what || {
                 return false;
             }
         }
+
     }
 }
 
