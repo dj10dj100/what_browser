@@ -97,7 +97,7 @@ var what = what || {
             return (what.device._android() || what.device._blackBerry() || what.device._ios() || what.device._opera() || what.device._windows());
         },
         isMobile: function() {
-            if (what.device.screenSize.width <= 550 && what.device._any() == true) {
+            if (what.device.screenSize.width <= 550 && what.device._any()) {
                 return true;
             } else {
                 return false;
