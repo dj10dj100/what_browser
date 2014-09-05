@@ -104,7 +104,7 @@ var what = what || {
             }
         },
         isTablet: function() {
-            if (what.device.screenSize.width <= 800 && what.device.screenSize.width >= 550) {
+            if (what.device.screenSize.width >= 1023 && what.device.screenSize.width <= 550) {
                 return true;
             } else {
                 return false;
