@@ -1,10 +1,23 @@
-whatBrowser.js
-============
 
-Ever tried to tell what the current Browser is being used in Javascript? 
+[![npm](https://img.shields.io/npm/dm/what_browser.svg)]()
+[![npm](https://img.shields.io/npm/dt/what_browser.svg)]()
+[![npm](https://img.shields.io/npm/v/what_browser.svg)]()
 
-Well I have, Hundreds of times - so after a bit of refinement I've added all the bits of code I've used in the past into one small library, feel free to fork it, make changes and suggestions....
+# <a href="https://github.com/dj10dj100/what_browser">WhatBrowser.js</a>
 
+Ever wanted to know what the current Browser is being used in Javascript? 
+
+This module helps *you* to understand what the device and browser the current session is using.
+
+# install
+<sup> npm</sup>
+```javascript
+npm install what_browser
+```
+<sup> yarn </sup>
+``` javascript
+yarn add what_browser
+```
 # What Browser am I using?
 
 A js module that returns information about the current users browser.
