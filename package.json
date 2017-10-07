@@ -1,0 +1,31 @@
+{
+  "name": "what_browser",
+  "version": "1.0.0",
+  "description": "Module for detecting which browser the current user has, and if it's mobile or touch enabled",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dj10dj100/what_browser.git"
+  },
+  "keywords": [
+    "what",
+    "browser",
+    "detect",
+    "browser",
+    "type",
+    "javascript",
+    "ios",
+    "mobile",
+    "touch",
+    "tablet"
+  ],
+  "author": "Daniel Jenkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dj10dj100/what_browser/issues"
+  },
+  "homepage": "https://github.com/dj10dj100/what_browser#readme"
+}

@@ -1,26 +1,21 @@
-/* -- Proper Browser Detection --------------- 
-    Author :Daniel Jenkins
-    URL : http://www.daniel-jenkins.com
-    GitHub : https://github.com/dj10dj100/what_browser
-    Use this however you want.
-*/
-
-var what = what || {
-
-    browser : {
-        isThis: function(callback) {
+/**
+ * What browser
+ */
+module.exports = {
+    browser: {
+        isThis: function (callback) {
             this.browser = this.searchString(this.dataBrowser) || "Other";
             this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
 
             what.device.browserName = this.browser;
             what.device.browserVersion = this.version;
 
-            if (typeof(callback) == "function") {
+            if (typeof (callback) == "function") {
                 callback(this.browser, this.version);
             }
         },
 
-        searchString: function(data) {
+        searchString: function (data) {
             for (var i = 0; i < data.length; i++) {
                 var dataString = data[i].string;
                 this.versionSearchString = data[i].subString;
@@ -31,9 +26,9 @@ var what = what || {
             }
         },
 
-        searchVersion: function(dataString) {
+        searchVersion: function (dataString) {
             var index = dataString.indexOf(this.versionSearchString);
-            if (index == -1) return;
+            if (index === -1) return;
             return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
         },
 
@@ -64,57 +59,57 @@ var what = what || {
      * Use this to find specific device type on the fly
      * Returns, mobile, type & screen sizes.
      */
-    device : {
+    device: {
         screenSize: {
             width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, // unfortunate IE Quirks, still faster than using $().width()
             height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
         },
-        _android: function() {
+        _android: function () {
             return navigator.userAgent.match(/Android/i);
         },
-        _blackBerry: function() {
+        _blackBerry: function () {
             return navigator.userAgent.match(/BlackBerry/i);
         },
-        _ios: function() {
+        _ios: function () {
             return navigator.userAgent.match(/iPhone|iPad|iPod/i);
         },
-        _iPhone: function() {
+        _iPhone: function () {
             return navigator.userAgent.match(/iPhone/i);
         },
-        _iPad: function() {
+        _iPad: function () {
             return navigator.userAgent.match(/iPad/i);
         },
-        _iPod: function() {
+        _iPod: function () {
             return navigator.userAgent.match(/iPod/i);
         },
-        _opera: function() {
+        _opera: function () {
             return navigator.userAgent.match(/Opera Mini/i);
         },
-        _windows: function() {
+        _windows: function () {
             return navigator.userAgent.match(/IEMobile|Windows Phone/i);
         },
-        _any: function() {
+        _any: function () {
             return (what.device._android() || what.device._blackBerry() || what.device._ios() || what.device._opera() || what.device._windows());
         },
-        isMobile: function() {
+        isMobile: function () {
             if (what.device.screenSize.width <= 550 && what.device._any()) {
                 return true;
             } else {
                 return false;
             }
         },
-        isTablet: function() {
+        isTablet: function () {
             if (what.device.screenSize.width >= 1023 && what.device.screenSize.width <= 550) {
                 return true;
             } else {
                 return false;
             }
         },
-        isTouchDevice: function() {
+        isTouchDevice: function () {
             return 'ontouchstart' in window // works on most browsers 
                 || 'onmsgesturechange' in window; // works on ie10
         },
-        isDesktop: function() {
+        isDesktop: function () {
             if (what.device.screenSize.width >= 640 && what.device.isTouchDevice() == false) {
                 return true;
             } else {
@@ -123,7 +118,5 @@ var what = what || {
         }
 
     }
-}
-
-
+};
 

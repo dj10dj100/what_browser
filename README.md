@@ -7,111 +7,78 @@ Well I have, Hundreds of times - so after a bit of refinement I've added all the
 
 # What Browser am I using?
 
-A simple javascript file that can be included to a webpage to use for Browser detection,
-
-Simply include : 
-``<script type="text/javascript" src="whatBrowser.js" ></script>
-``
-
-It's great to target older Browsers, IE6, IE7, IE8 and older versions of Safari, Chrome, Firefox, Opera.
+A js module that returns information about the current users browser.
 
 ```javascript
-what.Browser.isThis(function(device,version){ 
-	console.log(device,version)
+import what from 'what_browser';
+```
+
+# Browser information
+returns device type and version
+```javascript
+what.Browser.isThis(function(device,version) { 
+	console.log(device, version)
 });
 ```
 
-# Device Detecting
-
-Includes detection for mobile devices, it'll tell you if the device is : 
-
-### android: 
+#### If the Browser is Touch Enabled:
 
 ```javascript
-if(what.device._android() == true){
-	//Device is an Android
-}
+what.device.isTouchDevice()
 ```
 
-### BlackBerry:
+#### If the Browser is desktop:
+
 ```javascript
-if(what.device._blackBerry() == true){
-	//Device is a BlackBerry
-}
+what.device.isDesktop()
 ```
-### iOS 
+
+#### If the Browser is Tablet :
+
 ```javascript
-if(what.device._ios() == true){
-	//Device is iOS
-}
+what.device.isTablet()
 ```
+
+
+#### If the Browser is Mobile :
+```javascript
+what.device.isMobile()
+```
+
+# Device Detection
+
+## Specific Mobile operating systems 
+
+```javascript
+//Android
+what.device._android()
+//BlackBerry
+what.device._blackBerry()
+//iOS
+what.device._ios(),
+```
+## Specific models
+
 ### iPhone 
 ```javascript
-if(what.device._iPhone() == true){
-	//Device is iPhone
-}
+what.device._iPhone()
 ```
 ### iPad 
 ```javascript
-if(what.device._iPad() == true){
-	//Device is iPad
-}
+what.device._iPad()
 ```
 ### iPod 
 ```javascript
-if(what.device._iPod() == true){
-	//Device is iPod
-}
+what.device._iPod()
 ```
 ### Opera Mobile
 ```javascript
-if(what.device._opera() == true){
-	//Device is Opera Mobile
-}
+what.device._opera()
 ```
 ### Windows Phone
 ```javascript
-if(what.device._windows() == true){
-	//Device is Windows Phone
-}
+what.device._windows()
 ```
-
-Use this to find out if the current Browser is:
-
-#If the Browser is Touch Enabled:
-
-```javascript
-if(what.device.isTouchDevice() == true){
-	//Touch Enabled device
-}
-```
-
-#If the Browser is desktop:
-
-```javascript
-if(what.device.isDesktop() == true){
-	//Desktop device
-}
-```
-
-
-#If the Browser is Tablet :
-
-```javascript
-if(what.device.isTablet() == true){
-	//Tablet device
-}
-```
-
-
-#If the Browser is Mobile :
-```javascript
-if(what.device.isMobile() == true){
-	//Mobile device
-}
-```
-
-
 Any comments, or questions grab me on twitter @dj10dj100
 
 
