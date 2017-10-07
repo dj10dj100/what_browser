@@ -1,6 +1,6 @@
 {
   "name": "what_browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module for detecting which browser the current user has, and if it's mobile or touch enabled",
   "main": "index.js",
   "scripts": {
